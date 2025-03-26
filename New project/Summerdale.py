@@ -27,8 +27,8 @@ if price > 0:
 
     if extra == 1:
         price += 5000
-    elif extra != 2:
-        print("Invalid parking option selected.")
+    elif extra == 2:
+        print("Its free so no charge.")
 
     print(f"\nYou selected a {viewname}.")
     print(f"Total price: ${price:,}")
