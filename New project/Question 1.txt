@@ -1,0 +1,130 @@
+Question 1:
+
+#Code to calculate someone's age in 10 years
+
+name = input("Enter your name: ")
+age = int(input("Enter your age: "))
+
+Future = age + 10
+
+print(f"{name} you are going to be {Future} in 10 years.")
+
+Question 2:
+
+a) 57
+b) The numbers are being seen as strings and not integers so the numbers are just being placed next eachother
+c) num1 = int(input("Enter a number: "))
+   num2 = int(input("Enter another number: "))
+   result = num1 + num2
+   print(f"The result is: {result}")
+
+Question 3:
+
+length = float(input("Enter the length: "))
+width = float(input("Enter the width: "))
+area = length * width     # Calculate the area of the rectangle
+perimeter = 2 * length + 2 * width    # Calculate the perimeter of the rectangle
+
+print(f"The area is {area}cm²")
+print(f"The perimeter is {perimeter}cm")
+
+Question 4:
+
+# Prompt the user to enter their age and purchase amount
+age = int(input("Enter your age: "))
+purchase_amount = float(input("Enter your purchase amount: "))
+
+if age < 12 or age > 65:
+    discount = 0.15
+elif 12 <= age <= 65 and purchase_amount > 100:      # Discount for adults with a purchase > $100
+    discount = 0.10
+else:
+    discount = 0
+
+discount_amount = purchase_amount * discount
+final_price = purchase_amount - discount_amount
+
+# Display the discount amount and the final price
+print(f"Discount: ${discount_amount} and Final price: ${final_price}")   
+
+Question 5:
+
+temperature = int(input("Enter the temperature: "))
+humidity = int(input("Enter the humidity percentage: "))
+
+if temperature > 30:
+    if humidity >= 60:
+        print("Hot and humid")
+    else:
+        print("Hot")
+elif temperature >= 20:
+    print("Pleasant")
+else:
+    print("Cool")
+
+Question 6:
+
+score = int(input("Enter your score (0-100): "))
+
+if 0 <= score <= 100:
+    if 90 <= score <= 100:
+        print("Grade: A")
+    elif 80 <= score <= 89:
+        print("Grade: B")
+    elif 70 <= score <= 79:
+        print("Grade: C")
+    elif 60 <= score <= 69:
+        print("Grade: D")
+    else:
+        print("Fail")
+else:
+    print("Invalid score. Please enter a number between 0 and 100.")
+
+Question 7:
+
+count = int(input("How many numbers do you want to enter?: "))
+total = 0
+
+for i in range(count):
+    number = float(input(f"Enter number {i + 1}: "))
+    total += number
+
+average = total / count 
+
+print(f"Sum of the numbers: {total}")
+print(f"Average of the numbers: {average}")
+
+Question 8:
+
+import random
+
+number = random.randint(1, 100)
+guesses = 0
+
+while True:
+    guess = int(input("Guess a number between 1 and 100: "))
+    guesses += 1
+
+    if guess < number:
+        print("Too low.")
+    elif guess > number:
+        print("Too high.")
+    else:
+        print(f"Correct! You guessed it in {guesses} tries.")
+        break
+
+Question 9:
+
+# Ask the user for a number between 1 and 10
+n = int(input("Enter a number between 1 and 10: "))
+
+# Check if input is within the valid range
+if 1 <= n <= 10:
+    for i in range(1, n + 1):
+        for j in range(i):
+            print("*", end="")
+        print("")
+else:
+    print("Invalid input. Please enter a number between 1 and 10.")
+
+
